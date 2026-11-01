@@ -2,6 +2,16 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+const WHATSAPP_NUMBER = "233256340755"; // ← replace with your number
+
+function openWhatsApp(note = "") {
+  const msg = `Hello GhanaPrep Support 👋${note ? `\n${note}` : ""}`;
+  window.open(
+    `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,
+    "_blank",
+    "noopener,noreferrer"
+  );
+}
 
 /* ═══════════════════════════════════════════════════════════════
    GLOBAL STYLES
